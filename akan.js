@@ -54,8 +54,8 @@ let getDayOfWeek = function(day, month, year) {
 let selectAkanName = function(day, gender) {
     // This function returns an akan name based on the 
     // day of the week and gender
-    let maleNames = ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"];
-    let femaleNames = ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"];
+    let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
     if(gender.toLowerCase() === "male") {
         return maleNames[day];
@@ -135,24 +135,23 @@ let getYear = function() {
     return Number(year.value);
 }
 
+let displayResults = function(gender, day, month, year) {
+    // This function alerts the user of their akan name 
+    alert(`Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`);
+}
+
 form.addEventListener('submit', function(event) {
     let gender;
-
     let day, month, year;
 
     // stop the form from doing the action and GET stuff
     event.preventDefault(); 
     
-    // gender validation
+    // validate the form data
     gender = validateGender() ? getGender() : undefined;
-
-    // birthday validation
     day = validateDay() ? getDay() : undefined;
     month = validateMonth() ? getMonth() : undefined;
     year = validateYear() ? getYear() : undefined;
 
-    console.log(gender);
-    console.log(day);
-    console.log(month);
-    console.log(year);
+    displayResults(gender, day, month, year);
 })
