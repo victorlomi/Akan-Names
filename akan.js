@@ -5,6 +5,22 @@ let day = document.getElementById("day");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 
+form.addEventListener('submit', function(event) {
+    let gender;
+    let day, month, year;
+
+    // stop the form from doing the action and GET stuff
+    event.preventDefault(); 
+    
+    // validate the form data
+    gender = validateGender() ? getGender() : undefined;
+    day = validateDay() ? getDay() : undefined;
+    month = validateMonth() ? getMonth() : undefined;
+    year = validateYear() ? getYear() : undefined;
+
+    displayResults(gender, day, month, year);
+});
+
 let adjustMonth = function(month) {
     // This function returns the adjusted month
     // the month is adjusted because according to the formula
@@ -28,7 +44,7 @@ let adjustYear = function(month, year) {
     } else {
         return year;
     }
-}
+};
 
 let splitYear = function(originalYear) {
     // This function returns the century((19)20, (20)19, (18)75) 
@@ -62,7 +78,7 @@ let selectAkanName = function(day, gender) {
     } else if (gender.toLowerCase() === "female") {
         return femaleNames[day];
     }
-}
+};
 
 let validateGender = function() {
     // This function makes sure that gender has been chosen 
@@ -94,12 +110,12 @@ let validateDay = function() {
     } else {
         return true;
     }
-}
+};
 
 let getDay = function() {
     // This function returns the selected day
     return Number(day.value);
-}
+};
 
 let validateMonth = function() {
     // This function makes sure that the month entered
@@ -111,12 +127,12 @@ let validateMonth = function() {
     } else {
         return true;
     }
-}
+};
 
 let getMonth = function() {
     // This function returns the selected month
     return Number(month.value);
-}
+};
 
 let validateYear = function() {
     // This function makes sure that the year entered
@@ -128,30 +144,15 @@ let validateYear = function() {
     } else {
         return true;
     }
-}
+};
 
 let getYear = function() {
     // This function returns the selected year
     return Number(year.value);
-}
+};
 
 let displayResults = function(gender, day, month, year) {
     // This function alerts the user of their akan name 
     alert(`Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`);
-}
+};
 
-form.addEventListener('submit', function(event) {
-    let gender;
-    let day, month, year;
-
-    // stop the form from doing the action and GET stuff
-    event.preventDefault(); 
-    
-    // validate the form data
-    gender = validateGender() ? getGender() : undefined;
-    day = validateDay() ? getDay() : undefined;
-    month = validateMonth() ? getMonth() : undefined;
-    year = validateYear() ? getYear() : undefined;
-
-    displayResults(gender, day, month, year);
-})
