@@ -64,7 +64,11 @@ let validateGender = function() {
     // This function makes sure that gender has been chosen 
     // if gender has been chosen, it returns true
     // otherwise it will alert the user of the missing gender input
-
+    if((!genderBtns[0].checked) && (!genderBtns[1].checked)) {
+        alert("Please Select a Gender");
+    } else {
+        return true;
+    }
 };
 
 let getGender = function() {
