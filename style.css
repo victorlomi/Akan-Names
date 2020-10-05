@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+    
+main {
+    width: 864px;
+    height: 614px;
+    margin-top: 50px;
+    background-color: red;
+}
