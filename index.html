@@ -44,11 +44,24 @@
             <form action="">
                 <!-- gender -->
                 <h1 class="right-title">What is your gender?</h1>
-                <div class="gender-inputs">
-                    <input type="radio" id="male" name="gender" value="male" required>
+                <div class="gender-input">
+                    <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Male</label><br><br>
-                    <input type="radio" id="female" name="gender" value="female" required>
-                    <label for="female">Female</label><br><br> 
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <!-- birthday -->
+                <h1 class="right-title-alternative">When is your birthday?</h1>
+                <div class="birthday-input">
+                    <label for="day">Day:</label>
+                    <input name="day" id="day" type="number" placeholder="dd" min="1" max="31">
+                    <br><br>
+                    <label for="month">Month:</label>
+                    <input name="month" id="month" type="number" placeholder="mm" min="1" max="12">
+                    <br><br>
+                    <label for="year">Year:</label>
+                    <input name="year" id="year" type="number" placeholder="yyyy">
+                    <br><br>
                 </div>
             </form>
         </div>

@@ -17,7 +17,7 @@ main {
 /* left panel */
 .left-panel {
     background-color: #fd8922;
-    width: 400px;
+    width: 600px;
     height: 590px;
     border-radius: 15px;
     margin-top: 11px;
@@ -70,11 +70,27 @@ main {
     padding-top: 65px;
     padding-left: 40px;
     font-size: 24px;
-    color: #262626;
+    color: #383838;
 }
 
-.gender-inputs {
+.right-title-alternative {
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 24px;
+    color: #383838;
+}
+
+.gender-input {
     padding-left: 40px;
     font-size: 18px;
     color: #262626;
+}
+
+.birthday-input {
+    padding-left: 40px;
+    color: #262626;
+}
+
+#year {
+    width: 45px;
 }
