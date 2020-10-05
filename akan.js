@@ -39,11 +39,16 @@ let getDay = function(day, month, year) {
     // get the year and century from the year parameter 
     century = splitYear(year).century;
     year= splitYear(year).year;
-    
+
     year = adjustYear(month, year);
     month = adjustMonth(month);
     return (day + (Math.floor(2.6 * month - 0.2)) - (2 * century) + year + (Math.floor(year / 4)) + (Math.floor(century / 4))) % 7;
 };
+
+let selectAkanName = function(day, gender) {
+    // This function returns an akan name based on the 
+    // day of the week and gender
+}
 
 // Test getDay()
 
