@@ -1,5 +1,5 @@
 let adjustMonth = function(month) {
-    // this function returns the adjusted month
+    // This function returns the adjusted month
     // the month is adjusted because according to the formula
     // mar is month 1, apr is 2, and so on
     // jan and feb are special because they are months #11 & #12
@@ -12,7 +12,7 @@ let adjustMonth = function(month) {
 };
 
 let adjustYear = function(month, year) {
-    // this function returns the adjust year
+    // This function returns the adjust year
     // the year is adjusted because according to the formula
     // when calculating for jan and feb, you have to minus 1 
     // from the year
@@ -35,7 +35,6 @@ let splitYear = function(originalYear) {
 
 let getDay = function(day, month, year) {
     // This function returns the day of the week based on date
-
     // get the year and century from the year parameter 
     century = splitYear(year).century;
     year= splitYear(year).year;
