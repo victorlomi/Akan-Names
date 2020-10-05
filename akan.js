@@ -81,11 +81,14 @@ let getGender = function() {
 };
 
 form.addEventListener('submit', function(event) {
+    let gender;
+
     // stop the form from doing the action and GET stuff
     event.preventDefault(); 
     console.log("form submitted");
-
+    
+    // gender validation
     if(validateGender()) {
-        getGender();
+        gender = getGender();
     }
 })
