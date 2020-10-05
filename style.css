@@ -92,11 +92,8 @@ main {
 }
 
 #day, #month, #year {
-    font-size: 18px;
-}
-
-#year {
     width: 60px;
+    font-size: 18px;
 }
 
 #submit {

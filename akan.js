@@ -77,11 +77,11 @@ let validateGender = function() {
 
 let getGender = function() {
     // This function returns the selected gender 
-    genderBtns.forEach((gender) => {
-        if(gender.checked) {
-            return gender.value;
-        }
-    });
+    if(genderBtns[0].checked) {
+        return genderBtns[0].value;
+    } else {
+        return genderBtns[1].value;
+    }
 };
 
 let validateDay = function() {
