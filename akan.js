@@ -1,6 +1,10 @@
 let form = document.querySelector("form");
 let genderBtns = document.getElementsByName("gender");
 
+let day = document.getElementById("day");
+let month = document.getElementById("month");
+let year = document.getElementById("year");
+
 let adjustMonth = function(month) {
     // This function returns the adjusted month
     // the month is adjusted because according to the formula
@@ -83,28 +87,52 @@ let getGender = function() {
 let validateDay = function() {
     // This function makes sure that the day entered
     // is valid. meaning its in the range of 1-31
+    if(day.value === "") {
+        alert("Please Enter a  day");
+    } else if((Number(day.value) < 1) || (Number(day.value) > 31)) {
+        alert("Please input a day in the range: 1-31");
+    } else {
+        return true;
+    }
 }
 
 let getDay = function() {
     // This function returns the selected day
+    return Number(day.value);
 }
 
 let validateMonth = function() {
     // This function makes sure that the month entered
     // is valid. meaning its in the range of 1-12
+    if(month.value === "") {
+        alert("Please Enter a  month");
+    } else if((Number(month.value) < 1) || (Number(month.value) > 12)) {
+        alert("Please input a month in the range: 1-12");
+    } else {
+        return true;
+    }
 }
 
 let getMonth = function() {
     // This function returns the selected month
+    return Number(month.value);
 }
 
 let validateYear = function() {
     // This function makes sure that the year entered
-    // is valid. meaning it has 4 digits
+    // is valid. meaning it isn't negative or zero
+    if(year.value === "") {
+        alert("Please Enter a  year");
+    } else if (Number(year.value) < 1)  {
+        alert("Please enter a year that is greater than or equal to 1");
+    } else {
+        return true;
+    }
 }
 
 let getYear = function() {
     // This function returns the selected year
+    return Number(year.value);
 }
 
 form.addEventListener('submit', function(event) {
@@ -114,7 +142,6 @@ form.addEventListener('submit', function(event) {
 
     // stop the form from doing the action and GET stuff
     event.preventDefault(); 
-    console.log("form submitted");
     
     // gender validation
     gender = validateGender() ? getGender() : undefined;
@@ -123,4 +150,9 @@ form.addEventListener('submit', function(event) {
     day = validateDay() ? getDay() : undefined;
     month = validateMonth() ? getMonth() : undefined;
     year = validateYear() ? getYear() : undefined;
+
+    console.log(gender);
+    console.log(day);
+    console.log(month);
+    console.log(year);
 })
