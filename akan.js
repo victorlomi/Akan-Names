@@ -11,16 +11,22 @@ let adjustMonth = function(month) {
     return month;
 };
 
-let adjustYear = function(year) {
+let adjustYear = function(month, year) {
     // this function returns the adjust year
     // the year is adjusted because according to the formula
     // when calculating for jan and feb, you have to minus 1 
     // from the year
+    if((month === 1) || (month === 2)) {
+        return year - 1;
+    } else {
+        return year;
+    }
 }
 
 let getDay = function(day, month, year, century) {
     // This function returns the day of the week based on date
     month = adjustMonth(month);
+    year = adjustYear(month, year);
     return (day + (Math.floor(2.6 * month - 0.2)) - (2 * century) + year + (Math.floor(year / 4)) + (Math.floor(century / 4))) % 7;
 };
 
