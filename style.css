@@ -91,6 +91,22 @@ main {
     color: #262626;
 }
 
+#day, #month, #year {
+    font-size: 18px;
+}
+
 #year {
-    width: 45px;
+    width: 50px;
+}
+
+#submit {
+    background-color: #fd8922;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    width: 180px;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 100px;
 }
