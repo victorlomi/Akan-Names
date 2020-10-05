@@ -107,6 +107,7 @@ main {
 }
 
 #result {
+    font-size: 19px;
     margin: 0;
 }
 
@@ -120,5 +121,9 @@ main {
     height: 50px;
     margin-top: 50px;
     margin-left: 100px;
+    transition: all 150ms ease-out;
 }
 
+#submit:hover {
+    box-shadow: 0px 4px 9px -6px rgba(0,0,0,0.75);
+}

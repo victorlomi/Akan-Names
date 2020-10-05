@@ -1,4 +1,5 @@
 let form = document.querySelector("form");
+let submit = document.getElementById("submit");
 let genderBtns = document.getElementsByName("gender");
 
 let day = document.getElementById("day");
@@ -177,5 +178,7 @@ let displayResults = function(gender, day, month, year) {
     // This function inserts the result h1 element into the page 
     result.innerText = `Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`;
     resultsDiv.appendChild(result);
+
+    submit.style.marginTop = "10px";
 };
 
