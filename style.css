@@ -11,3 +11,12 @@ main {
     border-radius: 15px;
     background-color: #ffffff;
 }
+
+.left-panel {
+    background-color: red;
+    width: 400px;
+    height: 590px;
+    border-radius: 15px;
+    margin-top: -8px;
+    margin-left: 12px;
+}
