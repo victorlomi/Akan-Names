@@ -1,3 +1,6 @@
+let form = document.querySelector("form");
+let genderBtns = document.getElementsByName("gender");
+
 let adjustMonth = function(month) {
     // This function returns the adjusted month
     // the month is adjusted because according to the formula
@@ -47,8 +50,8 @@ let getDay = function(day, month, year) {
 let selectAkanName = function(day, gender) {
     // This function returns an akan name based on the 
     // day of the week and gender
-    const maleNames = ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"];
-    const femaleNames = ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"];
+    let maleNames = ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"];
+    let femaleNames = ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"];
 
     if(gender.toLowerCase() === "male") {
         return maleNames[day];
@@ -57,10 +60,23 @@ let selectAkanName = function(day, gender) {
     }
 }
 
-const form = document.querySelector("form");
+let validateGender = function() {
+    // This function makes sure that gender has been chosen 
+    // if gender has been chosen, it returns true
+    // otherwise it will alert the user of the missing gender input
+
+};
+
+let getGender = function() {
+    // This function returns the selected gender 
+};
 
 form.addEventListener('submit', function(event) {
     // stop the form from doing the action and GET stuff
     event.preventDefault(); 
     console.log("form submitted");
+
+    if(validateGender()) {
+        getGender();
+    }
 })
