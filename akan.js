@@ -36,7 +36,7 @@ let splitYear = function(originalYear) {
     };
 };
 
-let getDay = function(day, month, year) {
+let getDayOfWeek = function(day, month, year) {
     // This function returns the day of the week based on date
     // get the year and century from the year parameter 
     century = splitYear(year).century;
@@ -80,8 +80,37 @@ let getGender = function() {
     });
 };
 
+let validateDay = function() {
+    // This function makes sure that the day entered
+    // is valid. meaning its in the range of 1-31
+}
+
+let getDay = function() {
+    // This function returns the selected day
+}
+
+let validateMonth = function() {
+    // This function makes sure that the month entered
+    // is valid. meaning its in the range of 1-12
+}
+
+let getMonth = function() {
+    // This function returns the selected month
+}
+
+let validateYear = function() {
+    // This function makes sure that the year entered
+    // is valid. meaning it has 4 digits
+}
+
+let getYear = function() {
+    // This function returns the selected year
+}
+
 form.addEventListener('submit', function(event) {
     let gender;
+
+    let day, month, year;
 
     // stop the form from doing the action and GET stuff
     event.preventDefault(); 
@@ -90,5 +119,18 @@ form.addEventListener('submit', function(event) {
     // gender validation
     if(validateGender()) {
         gender = getGender();
+    }
+
+    // birthday validation
+    if(validateDay()) {
+        day = getDay();
+    }
+
+    if(validateMonth()) {
+        month = getMonth();
+    }
+
+    if(validateYear()) {
+        year = getYear();
     }
 })
