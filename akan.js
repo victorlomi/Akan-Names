@@ -33,8 +33,13 @@ let splitYear = function(originalYear) {
     };
 };
 
-let getDay = function(day, month, year, century) {
+let getDay = function(day, month, year) {
     // This function returns the day of the week based on date
+
+    // get the year and century from the year parameter 
+    century = splitYear(year).century;
+    year= splitYear(year).year;
+    
     year = adjustYear(month, year);
     month = adjustMonth(month);
     return (day + (Math.floor(2.6 * month - 0.2)) - (2 * century) + year + (Math.floor(year / 4)) + (Math.floor(century / 4))) % 7;
@@ -43,10 +48,10 @@ let getDay = function(day, month, year, century) {
 // Test getDay()
 
 // October 5th 2020 -> should be 1 for monday
-console.log(getDay(5, 10, 20, 20));
+console.log(getDay(5, 10, 2020));
 
 // August 5th 2020 -> should be 3 for wednesday
-console.log(getDay(5, 8, 20, 20));
+console.log(getDay(5, 8, 2020));
 
 // February 18th 2020 -> should be 2 for tuesday
-console.log(getDay(18, 2, 20, 20));
+console.log(getDay(18, 2, 2020));
