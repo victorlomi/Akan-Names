@@ -117,20 +117,10 @@ form.addEventListener('submit', function(event) {
     console.log("form submitted");
     
     // gender validation
-    if(validateGender()) {
-        gender = getGender();
-    }
+    gender = validateGender() ? getGender() : undefined;
 
     // birthday validation
-    if(validateDay()) {
-        day = getDay();
-    }
-
-    if(validateMonth()) {
-        month = getMonth();
-    }
-
-    if(validateYear()) {
-        year = getYear();
-    }
+    day = validateDay() ? getDay() : undefined;
+    month = validateMonth() ? getMonth() : undefined;
+    year = validateYear() ? getYear() : undefined;
 })
