@@ -120,9 +120,9 @@ let validateDay = function() {
     // This function makes sure that the day entered
     // is valid. meaning its in the range of 1-31
     if(day.value === "") {
-        alert("Please Enter a  day");
+        alert("Please Select a Day");
     } else if((Number(day.value) < 1) || (Number(day.value) > 31)) {
-        alert("Please input a day in the range: 1-31");
+        alert("Please Select a Day in the Range: 1-31");
     } else {
         return true;
     }
@@ -137,9 +137,7 @@ let validateMonth = function() {
     // This function makes sure that the month entered
     // is valid. meaning its in the range of 1-12
     if(month.value === "") {
-        alert("Please Enter a  month");
-    } else if((Number(month.value) < 1) || (Number(month.value) > 12)) {
-        alert("Please input a month in the range: 1-12");
+        alert("Please Select a Month");
     } else {
         return true;
     }
@@ -154,9 +152,9 @@ let validateYear = function() {
     // This function makes sure that the year entered
     // is valid. meaning it isn't negative or zero
     if(year.value === "") {
-        alert("Please Enter a  year");
+        alert("Please Select a Year");
     } else if (Number(year.value) < 1)  {
-        alert("Please enter a year that is greater than or equal to 1");
+        alert("Please Select a Year That is Greater Than or Equal to 1");
     } else {
         return true;
     }
