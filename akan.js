@@ -1,3 +1,10 @@
+let adjustYear = function(year) {
+    // this function returns the adjusted year
+    // the year is adjusted because according to the formula
+    // mar is month 1, apr is 2, and so on
+    // jan and feb are special because they are months #11 & #12
+};
+
 let getDay = function(day, month, year, century) {
     // This function returns the day of the week based on date
     return (day + (Math.floor(2.6 * month - 0.2)) - (2 * century) + year + (Math.floor(year / 4)) + (Math.floor(century / 4))) % 7;
