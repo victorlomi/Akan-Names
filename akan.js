@@ -73,6 +73,11 @@ let validateGender = function() {
 
 let getGender = function() {
     // This function returns the selected gender 
+    genderBtns.forEach((gender) => {
+        if(gender.checked) {
+            return gender.value;
+        }
+    });
 };
 
 form.addEventListener('submit', function(event) {
