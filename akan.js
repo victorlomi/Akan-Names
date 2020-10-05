@@ -5,6 +5,9 @@ let day = document.getElementById("day");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 
+// to keep track of whether year was already clicked
+let wasPressed = false;
+
 form.addEventListener('submit', function(event) {
     let gender;
     let day, month, year;
@@ -20,6 +23,16 @@ form.addEventListener('submit', function(event) {
 
     displayResults(gender, day, month, year);
 });
+
+year.addEventListener("click", function() {
+    // This function will set the value of the year
+    // input to 2020 to make it easier to use the
+    // increase/decrease buttons
+    if(!wasPressed) {
+        year.value = 2020;
+    }
+    wasPressed = true;
+})
 
 let adjustMonth = function(month) {
     // This function returns the adjusted month
