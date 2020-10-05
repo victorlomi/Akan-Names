@@ -23,9 +23,14 @@ let adjustYear = function(month, year) {
     }
 }
 
-let splitYear = function(year) {
+let splitYear = function(originalYear) {
     // This function returns the century((19)20, (20)19, (18)75) 
-    // and year(19(20), 20(19), 18(75)) from the string 'year'
+    // and year(19(20), 20(19), 18(75)) from the string 'originalYear'
+    originalYear = originalYear.toString();
+    return {
+        century: Number(originalYear[0] + originalYear[1]),
+        year: Number(originalYear[2] + originalYear[3])
+    };
 };
 
 let getDay = function(day, month, year, century) {
