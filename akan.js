@@ -25,8 +25,8 @@ let adjustYear = function(month, year) {
 
 let getDay = function(day, month, year, century) {
     // This function returns the day of the week based on date
-    month = adjustMonth(month);
     year = adjustYear(month, year);
+    month = adjustMonth(month);
     return (day + (Math.floor(2.6 * month - 0.2)) - (2 * century) + year + (Math.floor(year / 4)) + (Math.floor(century / 4))) % 7;
 };
 
