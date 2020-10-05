@@ -50,13 +50,19 @@ let selectAkanName = function(day, gender) {
     // day of the week and gender
 }
 
-// Test getDay()
+// Test getDay() & selectAkanName()
 
 // October 5th 2020 -> should be 1 for monday
+// Akan Name for monday(1) -> should be kwadwo/adwoa
 console.log(getDay(5, 10, 2020));
+console.log(selectAkanName(getDay(5, 10, 2020), 'male'));
 
 // August 5th 2020 -> should be 3 for wednesday
+// Akan Name for wednesday(3) -> should be kwaku/akua
 console.log(getDay(5, 8, 2020));
+console.log(selectAkanName(getDay(5, 10, 2020), 'male'));
 
 // February 18th 2020 -> should be 2 for tuesday
+// Akan Name for tuesday(2) -> should be kwabena/abenaa
 console.log(getDay(18, 2, 2020));
+console.log(selectAkanName(getDay(5, 10, 2020), 'male'));
