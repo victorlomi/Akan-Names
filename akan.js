@@ -21,7 +21,10 @@ form.addEventListener('submit', function(event) {
     month = validateMonth() ? getMonth() : undefined;
     year = validateYear() ? getYear() : undefined;
 
-    displayResults(gender, day, month, year);
+    if((gender !== undefined) && (day !== undefined) && (month !== undefined) && (year !== undefined)) {
+        displayResults(gender, day, month, year);
+    }
+
 });
 
 year.addEventListener("click", function() {
