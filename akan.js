@@ -3,6 +3,12 @@ let adjustMonth = function(month) {
     // the month is adjusted because according to the formula
     // mar is month 1, apr is 2, and so on
     // jan and feb are special because they are months #11 & #12
+    if((month === 1) || (month === 2)) {
+        month += 10;
+    } else {
+        month -= 2;
+    }
+    return month;
 };
 
 let getDay = function(day, month, year, century) {
