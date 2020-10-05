@@ -10,7 +10,6 @@ let year = document.getElementById("year");
 let resultsDiv = document.getElementById("results");
 let result = document.createElement("h1");
 
-// add css styles 
 result.id = "result";
 result.classList.add("right-title-alternative");
 
@@ -179,6 +178,6 @@ let displayResults = function(gender, day, month, year) {
     result.innerText = `Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`;
     resultsDiv.appendChild(result);
 
-    submit.style.marginTop = "10px";
+    submit.style.marginTop = "25px";
 };
 
