@@ -23,6 +23,11 @@ let adjustYear = function(month, year) {
     }
 }
 
+let splitYear = function(year) {
+    // This function returns the century((19)20, (20)19, (18)75) 
+    // and year(19(20), 20(19), 18(75)) from the string 'year'
+};
+
 let getDay = function(day, month, year, century) {
     // This function returns the day of the week based on date
     year = adjustYear(month, year);
