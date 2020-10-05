@@ -1,6 +1,6 @@
-let adjustYear = function(year) {
-    // this function returns the adjusted year
-    // the year is adjusted because according to the formula
+let adjustMonth = function(month) {
+    // this function returns the adjusted month
+    // the month is adjusted because according to the formula
     // mar is month 1, apr is 2, and so on
     // jan and feb are special because they are months #11 & #12
 };
