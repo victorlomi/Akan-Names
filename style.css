@@ -6,6 +6,7 @@ body {
 }
     
 main {
+    display: flex;
     width: 864px;
     height: 614px;
     margin-top: 50px;
@@ -13,12 +14,13 @@ main {
     background-color: #ffffff;
 }
 
+/* left panel */
 .left-panel {
     background-color: #fd8922;
     width: 400px;
     height: 590px;
     border-radius: 15px;
-    margin-top: -8px;
+    margin-top: 11px;
     margin-left: 12px;
 }
 
@@ -56,4 +58,10 @@ main {
 .names {
     margin-top: -15px;
     display: flex;
+}
+
+/* right panel */
+.right-panel {
+    width: 200px;
+    height: 600px;
 }
