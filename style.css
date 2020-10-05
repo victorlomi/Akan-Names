@@ -45,9 +45,13 @@ main {
     line-height: 1.5;
     padding-top: 0;
     padding-left: 30px;  
+    padding-right: 8px;
 }
 
 .left-action {
+    font-size: 18px;
+    color: #ffffff;
+    padding-top: 40px;
     text-decoration: underline;
 }
 
