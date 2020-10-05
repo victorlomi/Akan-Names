@@ -106,6 +106,10 @@ main {
     font-size: 18px;
 }
 
+#result {
+    margin: 0;
+}
+
 #submit {
     background-color: #fd8922;
     border: 0px;
@@ -114,6 +118,7 @@ main {
     font-size: 18px;
     width: 180px;
     height: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 100px;
 }
+

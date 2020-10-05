@@ -5,6 +5,14 @@ let day = document.getElementById("day");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 
+// elements for annoucing the akan name
+let resultsDiv = document.getElementById("results");
+let result = document.createElement("h1");
+
+// add css styles 
+result.id = "result";
+result.classList.add("right-title-alternative");
+
 // to keep track of whether year was already clicked
 let wasPressed = false;
 
@@ -166,7 +174,8 @@ let getYear = function() {
 };
 
 let displayResults = function(gender, day, month, year) {
-    // This function alerts the user of their akan name 
-    alert(`Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`);
+    // This function inserts the result h1 element into the page 
+    result.innerText = `Your Akan Name is ${selectAkanName(getDayOfWeek(day, month, year), gender)}`;
+    resultsDiv.appendChild(result);
 };
 
