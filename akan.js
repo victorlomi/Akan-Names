@@ -51,9 +51,9 @@ let selectAkanName = function(day, gender) {
     const maleNames = ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"];
     const femaleNames = ["akosua", "adwoa", "abenaa", "akua", "yaa", "afua", "ama"];
 
-    if(gender === "male") {
+    if(gender.toLowerCase() === "male") {
         return maleNames[day];
-    } else if (gender === "female") {
+    } else if (gender.toLowerCase() === "female") {
         return femaleNames[day];
     }
 }
@@ -63,14 +63,14 @@ let selectAkanName = function(day, gender) {
 // October 5th 2020 -> should be 1 for monday
 // Akan Name for monday(1) -> should be kwadwo/adwoa
 console.log(getDay(5, 10, 2020));
-console.log(selectAkanName(getDay(5, 10, 2020), 'male'));
+console.log(selectAkanName(getDay(5, 10, 2020), 'MALE'));
 console.log(selectAkanName(getDay(5, 10, 2020), 'female'));
 
 // August 5th 2020 -> should be 3 for wednesday
 // Akan Name for wednesday(3) -> should be kwaku/akua
 console.log(getDay(5, 8, 2020));
 console.log(selectAkanName(getDay(5, 8, 2020), 'male'));
-console.log(selectAkanName(getDay(5, 8, 2020), 'female'));
+console.log(selectAkanName(getDay(5, 8, 2020), 'FEMALE'));
 
 // February 18th 2020 -> should be 2 for tuesday
 // Akan Name for tuesday(2) -> should be kwabena/abenaa
