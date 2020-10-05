@@ -1,11 +1,13 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: #f9f9fb;
 }
     
 main {
     width: 864px;
     height: 614px;
     margin-top: 50px;
-    background-color: red;
+    border-radius: 15px;
+    background-color: #ffffff;
 }
